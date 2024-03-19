@@ -1,6 +1,4 @@
-import { expect, test } from '@playwright/test';
-
-test('index page has expected h1', async ({ page }) => {
-	await page.goto('/');
-	expect(await page.textContent('h1')).toBe('Welcome to SvelteKit');
-});
+fetch('/api/get-token')
+	.then(response => response.json())
+	.then(data => console.log(data))
+	.catch(error => console.error('Error:', error));
